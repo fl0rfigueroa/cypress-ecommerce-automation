@@ -4,7 +4,7 @@ Este repositorio contiene un conjunto de pruebas E2E (End-to-End) automatizadas 
 
 El objetivo de este proyecto es demostrar habilidades en la automatización de flujos críticos de un E-commerce, como el login, la navegación, la gestión del carrito y el proceso de checkout.
 
-[Haz clic aquí para ver un video de la demostración](demo.mp4)
+[Haz clic aquí para ver un video de la demostración](demo.gif)
 ---
 
 ## 🚀 Tecnologías Utilizadas
