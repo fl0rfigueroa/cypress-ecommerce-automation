@@ -3,6 +3,12 @@
   Pruebas E2E para el flujo principal de compra en www.saucedemo.com
 */
 
+
+function generarPostalRandom() {
+    // Genera un código postal aleatorio de 5 dígitos
+    return Math.floor(10000 + Math.random() * 90000).toString();
+}
+
 describe('Flujo de Compra en E-commerce - SauceDemo', () => {
 
     // Antes de cada prueba (it), visitamos el sitio e iniciamos sesión
@@ -61,10 +67,13 @@ describe('Flujo de Compra en E-commerce - SauceDemo', () => {
         cy.get('[data-test="checkout"]').click();
         cy.url().should('include', '/checkout-step-one.html');
 
+
+        const postalCodeRandom = generarPostalRandom();
+        cy.log(postalCodeRandom)
         // 5. Llenar formulario de checkout
         cy.get('[data-test="firstName"]').type('Juan');
         cy.get('[data-test="lastName"]').type('Perez');
-        cy.get('[data-test="postalCode"]').type('12345');
+        cy.get('[data-test="postalCode"]').type(postalCodeRandom);
         cy.get('[data-test="continue"]').click();
 
         // 6. Revisar orden y finalizar
