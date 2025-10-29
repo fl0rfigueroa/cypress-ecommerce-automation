@@ -73,7 +73,7 @@ describe('Flujo de Compra en E-commerce - SauceDemo', () => {
         // 5. Llenar formulario de checkout
         cy.get('[data-test="firstName"]').type('Juan');
         cy.get('[data-test="lastName"]').type('Perez');
-        cy.get('[data-test="postalCode"]').type(postalCodeRandom);
+        cy.get('[data-test="postalCode"]').type('12345');
         cy.get('[data-test="continue"]').click();
 
         // 6. Revisar orden y finalizar
